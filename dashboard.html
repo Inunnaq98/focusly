@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focusly - Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <img src="img/F CUSLY-3-2.png" alt="Focusly Logo" width="160">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Forside</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="funktioner.html">Funktioner</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="om.html">Om Focusly</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="kontakt.html">Kontakt os</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<section class="dashboard-page">
+    <div class="container">
+
+        <h1>Mit Dashboard</h1>
+
+        <p class="dashboard-text">
+            Her kan du få overblik over dine vigtigste opgaver, deadlines og dit stressniveau.
+        </p>
+
+        <div class="row mb-5">
+
+            <div class="col-lg-4">
+                <div class="product-card stat-card">
+                    <h3>📋 3 Opgaver</h3>
+                    <p>Aktive opgaver denne uge</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="product-card stat-card">
+                    <h3>📅 1 Deadline</h3>
+                    <p>Deadline inden for 24 timer</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="product-card stat-card">
+                    <h3>📊 Medium</h3>
+                    <p>Nuværende stressniveau</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="product-card">
+                    <h3>🎯 Dagens Fokus</h3>
+                    <ul>
+                        <li>UX Rapport</li>
+                        <li>Bootstrap Projekt</li>
+                        <li>Research Analyse</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="product-card">
+                    <h3>📊 Stressniveau</h3>
+
+                    <div class="stress-indicator">
+                        <span class="dot"></span>
+                        <span>Medium</span>
+                    </div>
+
+                    <p>
+                        Du har 3 aktive opgaver denne uge. Det er et passende niveau, men husk at prioritere de vigtigste først.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="product-card">
+                    <h3>📅 Deadlines</h3>
+                    <ul>
+                        <li>UX Rapport - 15/6</li>
+                        <li>Projekt - 17/6</li>
+                        <li>Test - 18/6</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="product-card task-section mt-5">
+
+            <h3>➕ Tilføj ny opgave</h3>
+
+            <p>
+                Skriv en ny opgave, så den bliver tilføjet til din personlige opgaveliste.
+            </p>
+
+            <div class="task-input-area">
+                <input type="text" id="taskInput" placeholder="Skriv en opgave">
+
+                <button onclick="addTask()" class="main-btn">
+                    Tilføj opgave
+                </button>
+            </div>
+
+            <ul id="taskList" class="task-list mt-4"></ul>
+
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container text-center">
+        <p>© 2026 Focusly. Alle rettigheder forbeholdes.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
