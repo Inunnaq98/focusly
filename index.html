@@ -3,34 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Focusly - Studieplatform</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <script src="script.js"></script></head>
+</head>
 
-    <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- JavaScript -->
-<script src="script.js"></script>
-
-</body>
-</html>
 <body>
 
-    <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
 
@@ -65,195 +46,258 @@
                     <a class="nav-link" href="kontakt.html">Kontakt os</a>
                 </li>
 
+                <li class="nav-item" id="loginNav">
+                    <a class="nav-link" href="log-in.html">
+                        Login
+                    </a>
+                </li>
+
+                <li class="nav-item" id="logoutNav">
+                    <a class="nav-link" href="#" onclick="logoutUser()">
+                        Logout
+                    </a>
+                </li>
+
             </ul>
         </div>
 
     </div>
 </nav>
 
-    <!-- Hero Section -->
 <section class="hero">
+    <div class="container">
 
+        <div class="hero-box text-center">
+
+            <span class="hero-badge">Studieplatform til unge</span>
+
+            <h1>Få styr på din studiehverdag</h1>
+
+            <p>
+                Focusly hjælper studerende med at prioritere opgaver,
+                holde styr på deadlines og reducere stress gennem et simpelt
+                og overskueligt dashboard.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="log-in.html" class="main-btn">Kom i gang</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="problem-solution">
+    <div class="container">
+
+        <div class="section-title text-center">
+            <h2>Problemet Focusly løser</h2>
+            <p>
+                Mange studerende oplever, at opgaver, deadlines og studiearbejde hurtigt
+                kan blive uoverskueligt. Det kan føre til stress, manglende motivation og
+                dårligere planlægning.
+            </p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <div class="product-card problem-card">
+                    <h3>Uden Focusly</h3>
+                    <ul>
+                        <li>❌ Mange opgaver uden overblik</li>
+                        <li>❌ Deadlines bliver nemt glemt</li>
+                        <li>❌ Svært at prioritere det vigtigste</li>
+                        <li>❌ Øget stress og mindre struktur</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="product-card solution-card">
+                    <h3>Med Focusly</h3>
+                    <ul>
+                        <li>✅ Opgaver samlet ét sted</li>
+                        <li>✅ Deadline-advarsler</li>
+                        <li>✅ Prioritet på opgaver</li>
+                        <li>✅ Stressniveau og progress bar</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+
+        <div class="section-title text-center">
+            <h2>Hvordan hjælper Focusly?</h2>
+            <p>
+                Focusly gør det lettere for studerende at skabe struktur,
+                planlægge opgaver og få ro i studiehverdagen.
+            </p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="product-card">
+                    <h3>📅 Planlægning</h3>
+                    <p>
+                        Saml alle opgaver og deadlines ét sted, så du hurtigt kan se,
+                        hvad der skal laves først.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="product-card">
+                    <h3>🎯 Fokus</h3>
+                    <p>
+                        Prioritér de vigtigste opgaver og arbejd mere struktureret
+                        uden at blive overvældet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="product-card">
+                    <h3>😌 Mindre stress</h3>
+                    <p>
+                        Få et visuelt overblik over arbejdsbelastning, deadlines
+                        og din fremgang.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="focusly-benefits">
+    <div class="container">
+
+        <div class="section-title text-center">
+            <h2>Focuslys vigtigste funktioner</h2>
+            <p>
+                Platformen kombinerer opgavestyring, deadline-overblik,
+                prioritering og stressindikator i ét samlet dashboard.
+            </p>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-3">
+                <div class="product-card">
+                    <h3>📋</h3>
+                    <h4>Opgaver</h4>
+                    <p>Saml alle studieopgaver ét sted.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="product-card">
+                    <h3>📅</h3>
+                    <h4>Deadlines</h4>
+                    <p>Se hvornår opgaver skal afleveres.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="product-card">
+                    <h3>⭐</h3>
+                    <h4>Prioritet</h4>
+                    <p>Vælg om opgaver har lav, medium eller høj prioritet.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="product-card">
+                    <h3>📊</h3>
+                    <h4>Stressniveau</h4>
+                    <p>Få et hurtigt overblik over arbejdsbelastningen.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="dashboard-preview-section">
+    <div class="container">
+
+        <div class="section-title text-center">
+            <h2>Et personligt dashboard</h2>
+            <p>
+                Når brugeren logger ind, kan egne opgaver, deadlines og prioritet
+                gemmes direkte i dashboardet.
+            </p>
+        </div>
+
+        <div class="product-card dashboard-preview-card">
+
+            <h3>Eksempel på studieplan</h3>
+
+            <ul class="dashboard-list">
+                <li><span>📚 UX Rapport</span> Høj prioritet</li>
+                <li><span>💻 Bootstrap Projekt</span> Medium prioritet</li>
+                <li><span>📝 Research Analyse</span> Lav prioritet</li>
+            </ul>
+
+            <div class="stress-bar">
+                <div class="stress-fill" style="width:60%"></div>
+            </div>
+
+            <p class="mt-4">
+                Stressniveau: Medium belastning
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cta-section">
     <div class="container text-center">
 
-        <h1>
-            Få styr på din studiehverdag
-        </h1>
+        <h2>Kom i gang med Focusly i dag</h2>
 
         <p>
-            Focusly hjælper studerende med at prioritere opgaver,
-            holde styr på deadlines og reducere stress gennem et
-            simpelt og overskueligt dashboard.
+            Opret en konto og få styr på opgaver, deadlines og studieplanlægning.
         </p>
 
-        <a href="dashboard.html" class="main-btn">
-            Åbn dashboard
+        <a href="log-in.html" class="main-btn">
+            Kom i gang
         </a>
 
     </div>
-
 </section>
 
-    <!-- Produkter Section -->
-    <section class="products" id="funktioner">
-
-        <div class="container">
-
-            <div class="section-title text-center">
-
-                <h2>Funktioner</h2>
-
-                <p>
-                    Fokus på struktur, overblik og mindre stress.
-                </p>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-lg-4">
-
-                    <div class="product-card">
-
-                        <h3>Smart Prioritering</h3>
-
-                        <p>
-                            Systemet hjælper brugeren med at fokusere på de vigtigste opgaver først.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="product-card">
-
-                        <h3>Dagligt Fokus</h3>
-
-                        <p>
-                            Vis kun de tre vigtigste opgaver for at undgå stress og overbelastning.
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="col-lg-4">
-
-                    <div class="product-card">
-
-                        <h3>Stressindikator</h3>
-
-                        <p>
-                            Giver et hurtigt overblik over arbejdsbelastningen.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+<footer class="footer">
+    <div class="container text-center">
+        <p>
+            © 2026 Focusly. Alle rettigheder forbeholdes.
+        </p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/focusly.dk/" target="_blank">
+                Instagram
+            </a>
+            <span>|</span>
+            <a href="https://www.facebook.com/profile.php?id=61590818286616" target="_blank">
+                Facebook
+            </a>
         </div>
-
-    </section>
-
-    <section class="about" id="dashboard">
-
-    <div class="container">
-
-        <h2 class="text-center mb-5">
-            Dashboard Preview
-        </h2>
-
-        <div class="product-card">
-
-         <h3>Dagens Fokus</h3>
-
-            <ul>
-                <li>📚 UX Rapport</li>
-                <li>💻 Bootstrap Projekt</li>
-                <li>📝 Research Analyse</li>
-            </ul>
-
-            <hr>
-
-            <h3>Stressniveau</h3>
-
-            <p style="color: orange;">
-                🟡 Medium
-            </p>
-
-            <p>
-                Du har 3 aktive opgaver denne uge.
-            </p>
-
-        </div>
-
     </div>
+</footer>
 
-</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 
-<!-- Mine =Opgaver Section -->
-<section class="tasks">
-
-    <div class="container">
-
-        <h2 class="text-center mb-5">
-            Mine Opgaver
-        </h2>
-
-        <div class="text-center">
-
-            <input type="text" id="taskInput" placeholder="Skriv en opgave">
-
-            <button onclick="addTask()" class="main-btn">
-                Tilføj
-            </button>
-
-        </div>
-
-        <ul id="taskList" class="task-list mt-4">
-
-        </ul>
-
-    </div>
-
-</section>
-
-    <!-- Om Os Section -->
-    <section class="about" id="om">
-
-        <div class="container">
-
-            <div class="text-center">
-
-                <h2>Om Focusly</h2>
-
-                <p>
-                    Focusly er udviklet til studerende mellem 18 og 25 år,
-                    som ønsker mere struktur i hverdagen.
-                    Platformen hjælper brugeren med at prioritere opgaver,
-                    holde styr på deadlines og reducere stress.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <div class="container text-center">
-
-            <p>
-                © 2026 Focusly. Alle rettigheder forbeholdes.            </p>
-
-        </div>
-
-    </footer>
 </body>
 </html>
