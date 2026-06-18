@@ -45,6 +45,18 @@
                     <a class="nav-link" href="kontakt.html">Kontakt os</a>
                 </li>
 
+                <li class="nav-item" id="loginNav">
+                    <a class="nav-link" href="log-in.html">
+                        Login
+                    </a>
+                </li>
+
+                <li class="nav-item" id="logoutNav">
+                    <a class="nav-link" href="#" onclick="logoutUser()">
+                        Logout
+                    </a>
+                </li>
+
             </ul>
         </div>
 
@@ -54,32 +66,46 @@
 <section class="dashboard-page">
     <div class="container">
 
-        <h1>Mit Dashboard</h1>
+        <div class="page-hero text-center">
+            <span class="hero-badge">Personligt overblik</span>
 
-        <p class="dashboard-text">
-            Her kan du få overblik over dine vigtigste opgaver, deadlines og dit stressniveau.
-        </p>
+            <h1>Mit Dashboard</h1>
+
+            <h2 id="welcomeUser" class="welcome-user"></h2>
+
+            <p class="dashboard-text">
+                Dashboardet er centrum i Focusly. Her får brugeren et hurtigt overblik
+                over opgaver, deadlines og arbejdsbelastning.
+            </p>
+        </div>
 
         <div class="row mb-5">
 
-            <div class="col-lg-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="product-card stat-card">
-                    <h3>📋 3 Opgaver</h3>
-                    <p>Aktive opgaver denne uge</p>
+                    <h3>📋 <span id="taskCount">0</span></h3>
+                    <p>Aktive opgaver</p>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="product-card stat-card">
-                    <h3>📅 1 Deadline</h3>
-                    <p>Deadline inden for 24 timer</p>
+                    <h3>📅 <span id="deadlineToday">0</span></h3>
+                    <p>Deadline i dag</p>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3 col-md-6">
                 <div class="product-card stat-card">
-                    <h3>📊 Medium</h3>
-                    <p>Nuværende stressniveau</p>
+                    <h3>🎯 <span id="focusCount">0</span></h3>
+                    <p>Fokusopgaver</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card stat-card">
+                    <h3>📊 <span id="stressLevel">Lav</span></h3>
+                    <p>Stressniveau</p>
                 </div>
             </div>
 
@@ -87,55 +113,56 @@
 
         <div class="row">
 
-            <div class="col-lg-4">
-                <div class="product-card">
-                    <h3>🎯 Dagens Fokus</h3>
-                    <ul>
-                        <li>UX Rapport</li>
-                        <li>Bootstrap Projekt</li>
-                        <li>Research Analyse</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-lg-4">
-                <div class="product-card">
+            <div class="col-lg-6">
+                <div class="product-card dashboard-card">
                     <h3>📊 Stressniveau</h3>
 
                     <div class="stress-indicator">
                         <span class="dot"></span>
-                        <span>Medium</span>
+                        <span id="stressText">Lav belastning</span>
                     </div>
 
                     <p>
-                        Du har 3 aktive opgaver denne uge. Det er et passende niveau, men husk at prioritere de vigtigste først.
+                        Stressniveauet beregnes ud fra antallet af aktive opgaver.
+                        Jo flere opgaver brugeren har, desto højere arbejdsbelastning.
                     </p>
+
+                    <div class="stress-bar">
+                        <div class="stress-fill" id="stressFill"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
-                <div class="product-card">
-                    <h3>📅 Deadlines</h3>
-                    <ul>
-                        <li>UX Rapport - 15/6</li>
-                        <li>Projekt - 17/6</li>
-                        <li>Test - 18/6</li>
-                    </ul>
+            <div class="col-lg-6">
+                <div class="product-card dashboard-card">
+                    <h3>🎯 Dagens Fokus</h3>
+                    <p id="focusAdvice">
+                        Tilføj opgaver for at få en personlig anbefaling.
+                    </p>
+                    <ul id="focusTaskList" class="dashboard-list"></ul>
                 </div>
             </div>
-
         </div>
 
         <div class="product-card task-section mt-5">
 
-            <h3>➕ Tilføj ny opgave</h3>
+            <h3>➕ Lav din egen studieplan</h3>
 
             <p>
-                Skriv en ny opgave, så den bliver tilføjet til din personlige opgaveliste.
+                Tilføj dine egne opgaver, deadlines og prioritet. Dine opgaver bliver gemt,
+                så du stadig kan se dem, når du åbner siden igen.
             </p>
 
             <div class="task-input-area">
                 <input type="text" id="taskInput" placeholder="Skriv en opgave">
+
+                <input type="date" id="deadlineInput">
+
+                <select id="priorityInput">
+                    <option value="Lav">Lav prioritet</option>
+                    <option value="Medium">Medium prioritet</option>
+                    <option value="Høj">Høj prioritet</option>
+                </select>
 
                 <button onclick="addTask()" class="main-btn">
                     Tilføj opgave
@@ -144,14 +171,58 @@
 
             <ul id="taskList" class="task-list mt-4"></ul>
 
+            <div class="completed-section mt-5">
+                <h3>🏆 Gennemførte opgaver</h3>
+                <ul id="completedTaskList" class="completed-task-list"></ul>
+            </div>
         </div>
 
+    </div>
+
+    <div class="product-card mt-5">
+
+        <h3>📈 Din Fremgang</h3>
+
+        <p>
+            Følg hvor mange af dine opgaver du har gennemført.
+        </p>
+
+        <div class="progress">
+            <div id="progressBar" class="progress-bar" style="width:0%">
+                0%
+            </div>
+        </div>
+
+        <div class="task-actions">
+
+            <button onclick="completeTask(${index})"
+                class="complete-btn">
+                Færdig
+            </button>
+
+            <button onclick="deleteTask(${index})"
+                class="delete-btn">
+                Slet
+            </button>
+
+        </div>
     </div>
 </section>
 
 <footer class="footer">
     <div class="container text-center">
-        <p>© 2026 Focusly. Alle rettigheder forbeholdes.</p>
+        <p>
+            © 2026 Focusly. Alle rettigheder forbeholdes.
+        </p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/focusly.dk/" target="_blank">
+                Instagram
+            </a>
+            <span>|</span>
+            <a href="https://www.facebook.com/profile.php?id=61590818286616" target="_blank">
+                Facebook
+            </a>
+        </div>
     </div>
 </footer>
 
