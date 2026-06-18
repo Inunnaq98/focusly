@@ -46,75 +46,136 @@
                     <a class="nav-link" href="kontakt.html">Kontakt os</a>
                 </li>
 
+                <li class="nav-item" id="loginNav">
+                    <a class="nav-link" href="log-in.html">
+                        Login
+                    </a>
+                </li>
+
+                <li class="nav-item" id="logoutNav">
+                    <a class="nav-link" href="#" onclick="logoutUser()">
+                        Logout
+                    </a>
+                </li>
+
             </ul>
         </div>
 
     </div>
 </nav>
+
     <!-- Sideindhold her -->
 <section class="features-page">
 
     <div class="container">
 
-        <h1>Funktioner</h1>
+        <div class="page-hero text-center">
+            <span class="hero-badge">Focuslys funktioner</span>
 
-        <p class="dashboard-text">
-            Focusly er udviklet til at hjælpe studerende med struktur, prioritering og mindre stress.
-        </p>
+            <h1>Funktioner der skaber overblik</h1>
 
-        <div class="row">
+            <p class="dashboard-text">
+                Focusly er udviklet til studerende, der har brug for struktur,
+                prioritering og ro i en travl studiehverdag.
+            </p>
+        </div>
+
+        <div class="row mt-5">
 
             <div class="col-lg-6">
-                <div class="product-card">
+                <div class="product-card feature-card">
+                    <span class="feature-number">01</span>
                     <h3>📋 Smart Prioritering</h3>
                     <p>
-                        Focusly hjælper brugeren med at vælge de vigtigste opgaver først,
-                        så det bliver lettere at fokusere.
+                        Focusly hjælper brugeren med at vælge de vigtigste opgaver først.
+                        I stedet for at vise en lang og uoverskuelig opgaveliste, fokuserer
+                        platformen på de opgaver, der har størst betydning.
                     </p>
+                    <ul class="feature-list">
+                        <li>Prioriterer vigtige opgaver</li>
+                        <li>Reducerer følelsen af kaos</li>
+                        <li>Gør det nemmere at starte</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <div class="product-card">
+                <div class="product-card feature-card">
+                    <span class="feature-number">02</span>
                     <h3>🎯 Dagligt Fokus</h3>
                     <p>
-                        Platformen viser kun de vigtigste opgaver for dagen,
-                        så brugeren ikke bliver overvældet.
+                        Brugeren får vist dagens vigtigste opgaver, så der kun fokuseres
+                        på det mest nødvendige. Dette gør studiehverdagen mere overskuelig.
                     </p>
+                    <ul class="feature-list">
+                        <li>Viser maks. tre fokusopgaver</li>
+                        <li>Skaber mere ro og retning</li>
+                        <li>Understøtter bedre planlægning</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <div class="product-card">
+                <div class="product-card feature-card">
+                    <span class="feature-number">03</span>
                     <h3>📊 Stressindikator</h3>
                     <p>
-                        Stressindikatoren giver et hurtigt visuelt overblik over
-                        brugerens arbejdsbelastning.
+                        Stressindikatoren giver et visuelt overblik over brugerens
+                        arbejdsbelastning. Den hjælper brugeren med at forstå, om der er
+                        for mange aktive opgaver på samme tid.
                     </p>
+                    <ul class="feature-list">
+                        <li>Viser lav, medium eller høj belastning</li>
+                        <li>Giver hurtig feedback</li>
+                        <li>Skaber bevidsthed om workload</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="col-lg-6">
-                <div class="product-card">
+                <div class="product-card feature-card">
+                    <span class="feature-number">04</span>
                     <h3>📅 Deadline-overblik</h3>
                     <p>
-                        Brugeren kan se kommende deadlines og planlægge sin tid bedre.
+                        Deadline-overblikket hjælper brugeren med at planlægge sin tid
+                        bedre og undgå at vigtige afleveringer bliver glemt.
                     </p>
+                    <ul class="feature-list">
+                        <li>Samler kommende deadlines</li>
+                        <li>Gør planlægning lettere</li>
+                        <li>Mindsker risikoen for stress</li>
+                    </ul>
                 </div>
             </div>
 
+        </div>
+
+        <div class="feature-cta text-center mt-5">
+            <h2>Se hvordan funktionerne fungerer i praksis</h2>
+            <p>Dashboardet samler opgaver, deadlines og stressniveau ét sted.</p>
+            <a href="dashboard.html" class="main-btn">Åbn dashboard</a>
         </div>
 
     </div>
 
 </section>
 
-
     <footer class="footer">
-        <div class="container text-center">
-            <p>© 2026 Focusly. Alle rettigheder forbeholdes.</p>
+    <div class="container text-center">
+        <p>
+            © 2026 Focusly. Alle rettigheder forbeholdes.
+        </p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/focusly.dk/" target="_blank">
+                Instagram
+            </a>
+            <span>|</span>
+            <a href="https://www.facebook.com/profile.php?id=61590818286616" target="_blank">
+                Facebook
+            </a>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
